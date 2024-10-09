@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animierte Website</title>
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="fade-in">Willkommen auf meiner animierten Website!</h1>
-        <button class="animated-button" onclick="showMessage()">Klicke mich!</button>
-        <div id="message" class="hidden">Danke fürs Klicken!</div>
+        <h1 class="fade-in">Countdown Timer</h1>
+        <div id="timer" class="timer">00:00:00:00</div>
+        <button class="animated-button" onclick="startTimer()">Starte den Countdown!</button>
+        <div id="message" class="hidden">Der Countdown ist abgelaufen!</div>
     </div>
     <script src="script.js"></script>
 </body>
