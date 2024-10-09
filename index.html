@@ -12,6 +12,9 @@
             text-align: center;
             padding: 20px;
         }
+        #controls {
+            margin-bottom: 20px;
+        }
         #errorLog {
             border: 1px solid #ccc;
             padding: 10px;
@@ -24,6 +27,15 @@
             opacity: 0;
             animation: fadeIn 0.5s forwards;
             margin-bottom: 5px;
+            padding: 5px;
+            border: 1px solid #dc3545;
+            border-radius: 4px;
+            background-color: #f8d7da;
+            color: #721c24;
+            transition: transform 0.3s;
+        }
+        .error-entry:hover {
+            transform: scale(1.02);
         }
         @keyframes fadeIn {
             from {
@@ -39,9 +51,18 @@
 </head>
 <body>
     <h1>Error Logger</h1>
+    <div id="controls">
+        <label for="frequency">Fehlerfrequenz (ms):</label>
+        <input type="number" id="frequency" value="1000" min="100" step="100">
+        <button id="startLogging">Start Logging</button>
+        <button id="stopLogging">Stop Logging</button>
+        <button id="clearLog">Log löschen</button>
+    </div>
     <div id="errorLog"></div>
 
     <script>
+        let loggingInterval;
+
         function logError() {
             const errorLog = document.getElementById("errorLog");
             const errorMessage = `Error at ${new Date().toISOString()}`;
@@ -51,8 +72,24 @@
             errorLog.prepend(errorEntry);
         }
 
-        // Log an error every millisecond
-        setInterval(logError, 1);
+        function startLogging() {
+            const frequency = parseInt(document.getElementById("frequency").value);
+            if (loggingInterval) clearInterval(loggingInterval);
+            loggingInterval = setInterval(logError, frequency);
+        }
+
+        function stopLogging() {
+            clearInterval(loggingInterval);
+        }
+
+        function clearLog() {
+            const errorLog = document.getElementById("errorLog");
+            errorLog.innerHTML = '';
+        }
+
+        document.getElementById("startLogging").onclick = startLogging;
+        document.getElementById("stopLogging").onclick = stopLogging;
+        document.getElementById("clearLog").onclick = clearLog;
     </script>
 </body>
 </html>
