@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Logger</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
             color: #333;
             text-align: center;
             padding: 20px;
+            overflow: hidden; /* Verhindert das Scrollen */
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f8d7da, #f5c6cb, #f8d7da, #f5c6cb);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            z-index: -1; /* Hinter den Inhalt setzen */
         }
         #errorLog {
             border: 1px solid #ccc;
@@ -18,17 +28,20 @@
             margin-top: 20px;
             max-height: 400px;
             overflow-y: auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
         .error-entry {
             opacity: 0;
             animation: fadeIn 0.5s forwards;
             margin-bottom: 5px;
-            padding: 5px;
+            padding: 10px;
             border: 1px solid #dc3545;
             border-radius: 4px;
-            background-color: #f8d7da;
+            background-color: rgba(248, 215, 218, 0.9);
             color: #721c24;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
         }
         @keyframes fadeIn {
             from {
@@ -40,23 +53,34 @@
                 transform: translateY(0);
             }
         }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Error Logger</h1>
+    <div class="background"></div>
     <div id="errorLog"></div>
 
     <script>
         function logError() {
             const errorLog = document.getElementById("errorLog");
-            const errorMessage = `Error at ${new Date().toISOString()}`;
+            const errorMessage = `Fehler aufgetreten: ${new Date().toISOString()}`;
             const errorEntry = document.createElement("div");
             errorEntry.classList.add("error-entry");
             errorEntry.textContent = errorMessage;
             errorLog.prepend(errorEntry);
         }
 
-        // Log an error every 1000 milliseconds (1 second)
+        // Log an error every second (1000 milliseconds)
         setInterval(logError, 1000);
     </script>
 </body>
