@@ -3,85 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über LukiDev</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
             padding: 20px;
-            overflow: hidden; /* Verhindert das Scrollen */
         }
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #f8d7da, #f5c6cb, #f8d7da, #f5c6cb);
-            background-size: 400% 400%;
-            animation: gradient 5s ease infinite;
-            z-index: -1; /* Hinter den Inhalt setzen */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
         }
-        #errorLog {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 20px;
-            max-height: 400px;
-            overflow-y: auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+        h1 {
+            margin: 0;
         }
-        .error-entry {
-            opacity: 0;
-            animation: fadeIn 0.5s forwards;
-            margin-bottom: 5px;
-            padding: 10px;
-            border: 1px solid #dc3545;
-            border-radius: 4px;
-            background-color: rgba(248, 215, 218, 0.9);
-            color: #721c24;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transform: translateY(-10px);
+        .content {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        a {
+            color: #35424a;
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div id="errorLog"></div>
-
-    <script>
-        function logError() {
-            const errorLog = document.getElementById("errorLog");
-            const errorMessage = `Fehler aufgetreten: ${new Date().toISOString()}`;
-            const errorEntry = document.createElement("div");
-            errorEntry.classList.add("error-entry");
-            errorEntry.textContent = errorMessage;
-            errorLog.prepend(errorEntry);
-        }
-
-        // Log an error every second (1000 milliseconds)
-        setInterval(logError, 1000);
-    </script>
+    <header>
+        <h1>Über LukiDev</h1>
+    </header>
+    <div class="content">
+        <h2>Wer ist LukiDev?</h2>
+        <p>LukiDev ist ein aktiver Entwickler, der in der Gaming-Community, insbesondere im Bereich Brawl Stars, bekannt ist. LukiDev hat mehrere Projekte auf GitHub, darunter das Repository <a href="https://github.com/LukiDev17/v54-brawl" target="_blank">v54-brawl</a>, das derzeit in der Entwicklung ist.</p>
+        
+        <h2>Projekte</h2>
+        <p>Unter den Projekten von LukiDev finden sich modifizierte Versionen und Tools, die das Gameplay verbessern und erweitern. Das Repository <a href="https://github.com/LukiDev17/v18-brawl" target="_blank">v18-brawl</a> zeigt das Engagement für die Weiterentwicklung von Brawl-Spielen.</p>
+        
+        <h2>Weitere Informationen</h2>
+        <p>Für mehr Informationen über die Projekte von LukiDev kannst du die GitHub-Seite besuchen: <a href="https://github.com/LukiDev17" target="_blank">LukiDev17 auf GitHub</a>.</p>
+    </div>
 </body>
 </html>
