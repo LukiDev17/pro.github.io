@@ -3,75 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über LukiDev</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 15px 0;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .content {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        h2 {
-            color: #35424a;
-            border-bottom: 2px solid #35424a;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        a {
-            color: #35424a;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        a:hover {
-            color: #007BFF; /* Blaue Farbe beim Hover */
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Coole Website</title>
 </head>
 <body>
     <header>
-        <h1>Über LukiDev</h1>
+        <h1>Willkommen auf meiner coolen Website!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Dienstleistungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="content">
-        <h2>Wer ist LukiDev?</h2>
-        <p>LukiDev ist ein aktiver Entwickler, der in der Gaming-Community, insbesondere im Bereich Brawl Stars, bekannt ist. LukiDev hat mehrere Projekte auf GitHub, darunter das Repository <a href="https://github.com/LukiDev17/v54-brawl" target="_blank">v54-brawl</a>, das derzeit in der Entwicklung ist.</p>
-        
-        <h2>Projekte</h2>
-        <p>Unter den Projekten von LukiDev finden sich modifizierte Versionen und Tools, die das Gameplay verbessern und erweitern. Das Repository <a href="https://github.com/LukiDev17/v18-brawl" target="_blank">v18-brawl</a> zeigt das Engagement für die Weiterentwicklung von Brawl-Spielen.</p>
-        
-        <h2>Weitere Informationen</h2>
-        <p>Für mehr Informationen über die Projekte von LukiDev kannst du die GitHub-Seite besuchen: <a href="https://github.com/LukiDev17" target="_blank">LukiDev17 auf GitHub</a>.</p>
-    </div>
+
+    <section id="about">
+        <h2>Über uns</h2>
+        <p>Wir sind ein Unternehmen, das coole Dinge macht und die Welt ein wenig besser macht!</p>
+    </section>
+
+    <section id="services">
+        <h2>Dienstleistungen</h2>
+        <ul>
+            <li>Dienstleistung 1</li>
+            <li>Dienstleistung 2</li>
+            <li>Dienstleistung 3</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Ihr Name" required>
+            <input type="email" placeholder="Ihre E-Mail" required>
+            <textarea placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit">Absenden</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
     <footer>
-        &copy; 2024 LukiDev. Alle Rechte vorbehalten.
+        <p>&copy; 2024 Coole Website. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
