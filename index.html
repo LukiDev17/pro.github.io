@@ -3,50 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Animation Website</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Coole Website</title>
 </head>
 <body>
-    <header>
-        <h1>Willkommen auf meiner coolen Website!</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#services">Dienstleistungen</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Wir sind ein Unternehmen, das coole Dinge macht und die Welt ein wenig besser macht!</p>
-    </section>
-
-    <section id="services">
-        <h2>Dienstleistungen</h2>
-        <ul>
-            <li>Dienstleistung 1</li>
-            <li>Dienstleistung 2</li>
-            <li>Dienstleistung 3</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Ihr Name" required>
-            <input type="email" placeholder="Ihre E-Mail" required>
-            <textarea placeholder="Ihre Nachricht" required></textarea>
-            <button type="submit">Absenden</button>
-        </form>
-        <p id="formMessage"></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Coole Website. Alle Rechte vorbehalten.</p>
-    </footer>
-
+    <div class="container">
+        <h1>Willkommen zur Discord-Animationsseite</h1>
+        <button class="animated-button" onclick="animate()">Klicke mich!</button>
+        <div id="message" class="hidden">Danke fürs Klicken!</div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
