@@ -1,9 +1,9 @@
 let timer;
-let countdownDuration = 300 * 24 * 60 * 60; // Countdown in Sekunden (300 Tage)
+let maintenanceDuration = 300 * 24 * 60 * 60; // Wartungsarbeiten für 300 Tage in Sekunden
 
 function startTimer() {
     const timerDisplay = document.getElementById('timer');
-    let remainingTime = countdownDuration;
+    let remainingTime = maintenanceDuration;
 
     timerDisplay.innerHTML = formatTime(remainingTime);
 
@@ -23,7 +23,7 @@ function formatTime(seconds) {
     const days = String(Math.floor(seconds / 86400)).padStart(2, '0'); // 86400 Sekunden pro Tag
     const hours = String(Math.floor((seconds % 86400) / 3600)).padStart(2, '0'); // 3600 Sekunden pro Stunde
     const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0'); // 60 Sekunden pro Minute
-    const secs = String(seconds % 60).padStart(2, '0');
+    const secs = String(seconds % 60).padStart(2, '0'); // Sekunden
     return `${days}:${hours}:${minutes}:${secs}`;
 }
 
