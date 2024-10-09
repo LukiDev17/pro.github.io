@@ -1,66 +1,38 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
+    background-color: #2c2f33;
+    color: white;
     text-align: center;
+    padding: 50px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.container {
+    max-width: 600px;
+    margin: auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #35424a;
-    color: #ffffff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    background-color: #35424a;
-    color: #ffffff;
+.animated-button {
+    background-color: #7289da;
     border: none;
-    padding: 10px 20px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-form button:hover {
-    background-color: #46a049;
+.animated-button:hover {
+    background-color: #5b6eae;
+    transform: scale(1.1);
+}
+
+#message {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#message.show {
+    opacity: 1;
 }
