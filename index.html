@@ -3,79 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Bot Hosting</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Error Logger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        #errorLog {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+        .error-entry {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            margin-bottom: 5px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Free Bot Hosting</h1>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Preise</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>Error Logger</h1>
+    <div id="errorLog"></div>
 
-    <section id="hero">
-        <h2>Hoste deinen Bot kostenlos</h2>
-        <p>Sichere und zuverlässige Hosting-Lösungen für deine Bots.</p>
-        <a href="#signup" class="cta-button">Jetzt starten</a>
-    </section>
+    <script>
+        function logError() {
+            const errorLog = document.getElementById("errorLog");
+            const errorMessage = `Error at ${new Date().toISOString()}`;
+            const errorEntry = document.createElement("div");
+            errorEntry.classList.add("error-entry");
+            errorEntry.textContent = errorMessage;
+            errorLog.prepend(errorEntry);
+        }
 
-    <section id="features">
-        <h3>Unsere Features</h3>
-        <div class="feature-list">
-            <div class="feature-item">
-                <h4>24/7 Verfügbarkeit</h4>
-                <p>Dein Bot ist rund um die Uhr online.</p>
-            </div>
-            <div class="feature-item">
-                <h4>Einfache Einrichtung</h4>
-                <p>In wenigen Minuten startklar.</p>
-            </div>
-            <div class="feature-item">
-                <h4>Sicher und zuverlässig</h4>
-                <p>Schütze deinen Bot mit unseren Sicherheitsfeatures.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing">
-        <h3>Preise</h3>
-        <p>Unser Basisplan ist komplett kostenlos. Upgrade auf Premium für mehr Funktionen.</p>
-        <div class="pricing-table">
-            <div class="pricing-plan">
-                <h4>Basis</h4>
-                <p>Kostenlos</p>
-                <ul>
-                    <li>1 Bot</li>
-                    <li>100 MB Speicher</li>
-                    <li>Grundlegender Support</li>
-                </ul>
-                <a href="#signup" class="cta-button">Anmelden</a>
-            </div>
-            <div class="pricing-plan">
-                <h4>Premium</h4>
-                <p>€9,99/Monat</p>
-                <ul>
-                    <li>Unbegrenzte Bots</li>
-                    <li>10 GB Speicher</li>
-                    <li>Priorisierter Support</li>
-                </ul>
-                <a href="#signup" class="cta-button">Upgrade</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h3>Kontakt</h3>
-        <p>Fragen? <a href="mailto:support@freebothosting.com">Schreib uns eine E-Mail</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Free Bot Hosting. Alle Rechte vorbehalten.</p>
-    </footer>
+        // Log an error every millisecond
+        setInterval(logError, 1);
+    </script>
 </body>
 </html>
