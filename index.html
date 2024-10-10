@@ -3,16 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wartungsarbeiten Countdown</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Webseite mit Effekten</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff6f61, #ffcc00);
+            transition: background 1s ease;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.2);
+            color: #ffcc00;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(1);
+            background-color: #ffa500;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="fade-in">Wartungsarbeiten Countdown</h1>
-        <div id="timer" class="timer">00:00:00:00</div>
-        <button class="animated-button" onclick="startTimer()">Starte den Countdown!</button>
-        <div id="message" class="hidden">Die Wartungsarbeiten sind abgeschlossen!</div>
+    <div>
+        <h1>Willkommen auf meiner Webseite!</h1>
+        <button onclick="changeBackground()">Ändere den Hintergrund</button>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function changeBackground() {
+            const colors = ['#ff6f61', '#00c6ff', '#ffcc00', '#32cd32', '#ff69b4'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = `linear-gradient(45deg, ${randomColor}, ${randomColor}cc)`;
+        }
+    </script>
 </body>
 </html>
