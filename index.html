@@ -1,125 +1,101 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LukiDev - Startseite</title>
+    <meta name="description" content="Willkommen auf der Privatserver-Seite.">
+    <meta name="keywords" content="Privatserver, Spiele, Community">
+    <title>Privatserver - Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: white;
-            scroll-behavior: smooth;
+            background-color: #f4f4f4;
         }
 
-        nav {
-            background-color: #333;
-            padding: 20px;
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 20px;
             text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        section {
-            padding: 60px;
-            text-align: center;
-            min-height: 100vh;
         }
 
         h1 {
-            color: #ffcc00;
-            font-size: 3rem;
-            margin-bottom: 20px;
+            margin: 0;
         }
 
-        .games-section h1 {
-            color: #32cd32;
+        nav {
+            margin: 10px 0;
         }
 
-        .mods-section h1 {
-            color: #ff69b4;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 20px 0;
-            font-size: 1.5rem;
-        }
-
-        a {
-            color: #1e90ff;
+        nav a {
+            color: #ffffff;
             text-decoration: none;
-            transition: color 0.3s;
+            padding: 10px 15px;
         }
 
-        a:hover {
-            color: #ffcc00;
+        nav a:hover {
+            background: #e8491d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #333;
-            padding: 20px;
             text-align: center;
-            color: white;
+            padding: 20px;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
-
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>Willkommen auf Privatserver</h1>
+        <nav>
+            <a href="#about">Über Uns</a>
+            <a href="#services">Dienste</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Startseite</a>
-        <a href="#games">Spiele</a>
-        <a href="#mods">Mods</a>
-    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Über Uns</h2>
+            <p>Wir bieten verschiedene Privatserver für beliebte Spiele an. Unser Ziel ist es, Spielern eine alternative
+                Möglichkeit zu bieten, ihre Lieblingsspiele zu genießen.</p>
+        </section>
 
-    <!-- Startseite -->
-    <section id="home">
-        <h1>Willkommen bei LukiDev</h1>
-        <p>Erfahre mehr über die Projekte von LukiDev, darunter Spiele und Mods!</p>
-    </section>
+        <section id="services">
+            <h2>Dienste</h2>
+            <ul>
+                <li>Privatserver für [Spiel 1]</li>
+                <li>Privatserver für [Spiel 2]</li>
+                <li>Privatserver für [Spiel 3]</li>
+            </ul>
+        </section>
 
-    <!-- Spiele-Seite -->
-    <section id="games" class="games-section">
-        <h1>Spiele von LukiDev</h1>
-        <ul>
-            <li><a href="#">Spiel 1: Brawl Adventures</a></li>
-            <li><a href="#">Spiel 2: League of Brawlers</a></li>
-            <li><a href="#">Spiel 3: Super Brawl Stars</a></li>
-        </ul>
-    </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Wenn du Fragen hast, kontaktiere uns bitte unter: <a href="mailto:info@privatserver.com">info@privatserver.com</a></p>
+        </section>
+    </div>
 
-    <!-- Mod-Seite -->
-    <section id="mods" class="mods-section">
-        <h1>Mods von LukiDev</h1>
-        <ul>
-            <li><a href="#">Mod 1: Brawl Mod Ultimate</a></li>
-            <li><a href="#">Mod 2: Super League Brawlers</a></li>
-            <li><a href="#">Mod 3: Custom Brawl Features</a></li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2024 LukiDev. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Privatserver. Alle Rechte vorbehalten.</p>
     </footer>
-
 </body>
+
 </html>
