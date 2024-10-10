@@ -13,9 +13,8 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: black;
             color: white;
-            animation: flacker 0.1s infinite;
+            animation: colorFlacker 0.5s infinite;
         }
 
         h1 {
@@ -40,10 +39,13 @@
             text-decoration: underline;
         }
 
-        @keyframes flacker {
-            0% { background-color: black; }
-            50% { background-color: #333; }
-            100% { background-color: black; }
+        /* Farbwechsel-Animation */
+        @keyframes colorFlacker {
+            0% { background-color: #ff6f61; }
+            25% { background-color: #32cd32; }
+            50% { background-color: #1e90ff; }
+            75% { background-color: #ffcc00; }
+            100% { background-color: #ff69b4; }
         }
     </style>
 </head>
