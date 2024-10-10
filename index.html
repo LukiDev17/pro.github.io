@@ -3,57 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über LukiDev</title>
+    <title>LukiDev - Startseite</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
             color: white;
-            animation: colorFlacker 0.5s infinite;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 60px;
+            text-align: center;
+            min-height: 100vh;
         }
 
         h1 {
-            font-size: 3rem;
             color: #ffcc00;
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
-        p {
+        .games-section h1 {
+            color: #32cd32;
+        }
+
+        .mods-section h1 {
+            color: #ff69b4;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 20px 0;
             font-size: 1.5rem;
-            max-width: 600px;
-            text-align: center;
-            color: #f1f1f1;
         }
 
         a {
-            color: #ffcc00;
+            color: #1e90ff;
             text-decoration: none;
-            font-weight: bold;
+            transition: color 0.3s;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
 
-        /* Farbwechsel-Animation */
-        @keyframes colorFlacker {
-            0% { background-color: #ff6f61; }
-            25% { background-color: #32cd32; }
-            50% { background-color: #1e90ff; }
-            75% { background-color: #ffcc00; }
-            100% { background-color: #ff69b4; }
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
         }
+
     </style>
 </head>
 <body>
-    <div>
-        <h1>Über LukiDev</h1>
-        <p>LukiDev ist ein erfahrener Entwickler, der innovative Softwarelösungen entwickelt. 
-        Schau dir sein <a href="https://github.com/LukiDev" target="_blank">GitHub-Profil</a> an, um mehr über seine Projekte zu erfahren.</p>
-    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Startseite</a>
+        <a href="#games">Spiele</a>
+        <a href="#mods">Mods</a>
+    </nav>
+
+    <!-- Startseite -->
+    <section id="home">
+        <h1>Willkommen bei LukiDev</h1>
+        <p>Erfahre mehr über die Projekte von LukiDev, darunter Spiele und Mods!</p>
+    </section>
+
+    <!-- Spiele-Seite -->
+    <section id="games" class="games-section">
+        <h1>Spiele von LukiDev</h1>
+        <ul>
+            <li><a href="#">Spiel 1: Brawl Adventures</a></li>
+            <li><a href="#">Spiel 2: League of Brawlers</a></li>
+            <li><a href="#">Spiel 3: Super Brawl Stars</a></li>
+        </ul>
+    </section>
+
+    <!-- Mod-Seite -->
+    <section id="mods" class="mods-section">
+        <h1>Mods von LukiDev</h1>
+        <ul>
+            <li><a href="#">Mod 1: Brawl Mod Ultimate</a></li>
+            <li><a href="#">Mod 2: Super League Brawlers</a></li>
+            <li><a href="#">Mod 3: Custom Brawl Features</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 LukiDev. Alle Rechte vorbehalten.</p>
+    </footer>
+
 </body>
 </html>
