@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webseite mit Effekten</title>
+    <title>Über LukiDev</title>
     <style>
         body {
             margin: 0;
@@ -12,57 +12,46 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(45deg, #ff6f61, #ffcc00);
-            transition: background 1s ease;
+            overflow: hidden;
+            background: black;
+            color: white;
+            animation: flacker 0.1s infinite;
         }
 
         h1 {
             font-size: 3rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        h1:hover {
-            transform: scale(1.2);
             color: #ffcc00;
         }
 
-        button {
-            padding: 15px 30px;
+        p {
             font-size: 1.5rem;
-            color: white;
-            background-color: #ff6f61;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            max-width: 600px;
+            text-align: center;
+            color: #f1f1f1;
         }
 
-        button:hover {
-            background-color: #ffcc00;
-            transform: scale(1.1);
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        button:active {
-            transform: scale(1);
-            background-color: #ffa500;
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes flacker {
+            0% { background-color: black; }
+            50% { background-color: #333; }
+            100% { background-color: black; }
         }
     </style>
 </head>
 <body>
     <div>
-        <h1>Willkommen auf meiner Webseite!</h1>
-        <button onclick="changeBackground()">Ändere den Hintergrund</button>
+        <h1>Über LukiDev</h1>
+        <p>LukiDev ist ein erfahrener Entwickler, der innovative Softwarelösungen entwickelt. 
+        Schau dir sein <a href="https://github.com/LukiDev" target="_blank">GitHub-Profil</a> an, um mehr über seine Projekte zu erfahren.</p>
     </div>
-
-    <script>
-        function changeBackground() {
-            const colors = ['#ff6f61', '#00c6ff', '#ffcc00', '#32cd32', '#ff69b4'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.background = `linear-gradient(45deg, ${randomColor}, ${randomColor}cc)`;
-        }
-    </script>
 </body>
 </html>
